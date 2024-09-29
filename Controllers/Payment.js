@@ -25,7 +25,7 @@ export const paymentVerify=async(req,res)=>{
             razorpay_payment_id,
             razorpay_signature
         })
-        res.redirect(`http://localhost:5173/paymentDone?reference=${razorpay_payment_id}`)
+        res.redirect(`https://payment-frontend-mocha.vercel.app/paymentDone?reference=${razorpay_payment_id}`)
     }else{
         res.status(200).json({
             success:false,
